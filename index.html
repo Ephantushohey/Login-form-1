@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="text" id="username" placeholder="Enter your username">
+            <label for="username" onclick="expand(this)">USERNAME</label>
+        
+            <input type="password" id="password" placeholder="Enter your password">
+            <label for="password" onclick="expand(this)">PASSWORD</label>
+        
+            <button>SUBMIT</button>
+        </form>
+        
+    </div>
+        <script>
+    function expand(label){
+        var elemId = label.getAttribute("for");
+        document.getElementById(elemId).style.height = "45px";
+        document.getElementById(elemId).classList.add('my-style');
+        label.style.transform = "translateY(-45px)";
+    }
+        </script>
+</body>
+</html>
